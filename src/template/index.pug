@@ -1,3 +1,36 @@
 extends _layout/layout.pug
 block main 
-	.abc HELLO CUDA
+	section.home_slider
+		.container
+			.row
+				.col
+					h1 Cái gì zị trời
+						br
+						| Sao mà biết đc 
+					p
+						a.btn.btn-light(href="#") lien ket
+	section.home_services
+		.container
+			.home_nav
+				.row
+					.col-12
+						.kimoanh-title.orange
+							h2 dự án
+							span
+				.row
+					.col
+						ul.nav.justify-content-center.nav-pills(data-select)
+							li.nav-item.active
+								a.nav-link(href='#') dự án đã triển khai
+							li.nav-item
+								a.nav-link(href='#') dự án đã hoàn thành 	
+			.row
+				.col
+					h2 dnsnsalsnalsnasa
+					p dajsamsamsa
+			.row
+				- for(x=1; x<5; x++)
+					.col-sm-6.col-md-3
+						img(src="img/home_icon_"+x+".png", alt="")
+						h3 Cái gì zị trời
+						p sasasasaadsa

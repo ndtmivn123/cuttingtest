@@ -15,11 +15,22 @@ gulp.task('copy', function () {
     ])
     .pipe(gulp.dest('./dist/img'));
 });
+gulp.task('copy', function () {
+  return gulp.src([
+      './src/fonts/**.*',
+    ])
+    .pipe(gulp.dest('./dist/webfonts'));
+});
 
 // Nối file CSS
 gulp.task('noifile-css', function () {
   return gulp.src([
       'bower_components/bootstrap/dist/css/bootstrap.min.css',
+      'bower_components/Font-Awesome/web-fonts-with-css/css/fa-brands.min.css',
+      'bower_components/Font-Awesome/web-fonts-with-css/css/fa-regular.min.css',
+      'bower_components/Font-Awesome/web-fonts-with-css/css/fa-solid.min.css',
+      'bower_components/Font-Awesome/web-fonts-with-css/css/fontawesome.css',
+      'bower_components/jquery-bar-rating/dist/themes/fontawesome-stars.css',
     ])
     .pipe(concat('thuvien.css'))
     .pipe(gulp.dest('./dist/css'));
@@ -68,12 +79,19 @@ gulp.task('taohtml', function buildHTML() {
     }))
     .pipe(gulp.dest('./dist'));
 });
+//Task copy font
+gulp.task('fonts', function() {
+  gulp.src('src/fonts/**/*')
+      .pipe(gulp.dest('./dist/webfonts'))
+      .pipe(browserSync.stream())
+});
 
 // Task này có nhiệm vụ theo dõi mọi thay đổi trên hệ thống
 gulp.task('theodoi', function () {
   gulp.watch('./src/styles/**/*.sass', ['taocss']);
   gulp.watch('./src/template/**/*.pug', ['taohtml']);
   gulp.watch('./src/scripts/**/*.js', ['taojs']);
+  gulp.watch('src/fonts/**/*', ['fonts']);
   gulp.watch("./dist/**/*.*").on('change', browserSync.reload);
 });
 

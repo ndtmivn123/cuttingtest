@@ -1,0 +1,26 @@
+section.home_form
+    .container
+        .row.info
+            .col-md-7.col-lg-12
+                h3.h3.mt-5.mt-md-0.mb-4 Form dday ne nha ahihihihi
+                p Cham hoi
+                form.validator
+                    .row
+                        .form-group.col-md-6
+                            label(for="name") Name
+                                span.text-danger (*)
+                            input#name.form-control(type='text', placeholder='Name', data-error="Vui lòng nhập thông tin", required)
+                        .help-block.with-errors
+                        .form-group.col-md-6
+                            label(for='Email') Email
+                                span.text-danger (*)
+                            input#name.form-control(type='text', placeholder='Name', data-error="Vui lòng nhập thông tin", required)
+                        .help-block.with-errors
+                    .row
+                        .form-gruop.col
+                            label(for="sms") Message
+                            textarea#sms.form-control(name="sms", cols="30", rows="10")
+                    .row
+                        .col.submit
+                            button.btn.btn-outline-primary.text-uppercase(type="submit")
+                                | Submit
