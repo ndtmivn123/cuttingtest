@@ -6,16 +6,18 @@ html(lang="en")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		title FullStack Vietnam
 		link(rel="stylesheet", href="./css/thuvien.css")
+		link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=vietnamese', rel='stylesheet')
 		link(rel="stylesheet", href="./css/main.css")
 	body
 		include header
 		main 
 			block main
 			include team
+			include portfolio
 			include form
 			
 			
-		//- include footer
+		include footer
 		script(src="./js/thuvien.js")
 		script(src="./js/main.js")
 		

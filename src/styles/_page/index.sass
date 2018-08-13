@@ -1,6 +1,149 @@
 @import ../_core/all
 
 .home_slider
-    +caiGiDo(null,300px)
+    +caiGiDo($mauvang,500px)
+    h1
+        font-size: 2.4rem
+        letter-spacing: 2px 
+    p
+        a
+            border: 2px dashed
+            background: none
+        a:hover
+            transform: translateY(5px)
+            transition: 1s
 .home_services
-    +caiGiDo($maudo,696px)
+    +caiGiDo($maudo,500px)
+    .home_nav
+        padding: 2rem 0
+        .nav-item
+            .nav-link
+                background: $mauden
+                color: $mautrang
+                text-transform: uppercase
+                font-weight: 600
+                font-size: 0.9rem
+                border-radius: 3rem
+                margin-right: .5rem
+                &:last-child
+                    .nav-link
+                        margin-right: 0
+                &:hover, &.active
+                    .nav-link
+                        background: $maudo
+                        color: $mauvang
+    h1
+        font-size: 2.4rem
+        letter-spacing: 2px 
+    p
+        a
+            border: 2px dashed
+            background: none
+        a:hover
+            transform: translateY(5px)
+            transition: 1s
+    span
+        width: 40px
+        height: 3px
+        background: $mauden
+        display: inline-block
+        position: relative
+        margin: 1rem
+        &:after,
+        &:before
+            content: ''
+            display: block
+            background: $mauden
+            position: absolute
+            transform: translateX(-50%)
+            width: 60px
+            height: 3px
+        &:before
+            bottom: -12px
+            right: 50%
+        &:after
+            bottom: -12px
+            left: 50%
+    img
+        max-width: 100%
+    
+.menu
+    background: $mauvang
+    padding-top: 2rem
+    .navbar-toggler
+        padding: 0rem 0.75rem
+        border: 0
+        .mdi
+            font-size: 2rem
+        &:focus
+            outline: none
+    .navbar-brand
+        img
+            max-height: 2rem
+        .navbar-collapse
+            display: flex
+            flex-direction: column
+            transition: 0.5s ease-in-out
+    #CCMenuHeader
+            padding-left: 65%
+            a
+                color: $mautrang
+                font-size: 1.2rem
+                font-weight: 400
+.home_form
+    padding: 4rem 0
+    display: flex
+    justify-content: center
+    text-align: center
+    align-items: center
+    .info
+        h3
+            font-size: 1.3rem
+            text-transform: uppercase
+        .validator
+            label
+                border-radius: 0
+                display: none
+            .col
+                &.submit
+                    margin-top: 2rem
+                    .btn
+                        border-radius: 8px
+                        width: 20rem
+                        height: 6rem
+                        background: #3c5499
+                        color: #ffffff
+                        border-bottom: 5px solid #ff000042
+                        font-size: 1.5rem
+
+.footer
+    display: flex
+    text-align: center
+    font-size: 1.2rem
+    font-weight: 300
+    flex-wrap: nowrap
+    background: #0000004a
+    .container
+        justify-content: center
+        li
+            a
+                color: #ffffff
+.home_team
+    +caiGiDo(null,568px)
+    img
+        // max-width: 100px
+        border-radius: 50%
+        display: inline-block
+    .socials
+        .social-list
+            li
+                background: grey
+                width: 25px
+                height: 25px
+                border-radius: 50%
+                align-items: center
+                a
+                    i
+                        color: $mautrang
+.home_portfolio
+    +caiGiDo($maungoc,568px)
